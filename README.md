@@ -1,4 +1,4 @@
-# React-Native-FrontEnd-Masters-Practices
+# React Native FrontEnd Masters Practices
 
 [React Native, v2](https://frontendmasters.com/courses/react-native-v2/)
 
