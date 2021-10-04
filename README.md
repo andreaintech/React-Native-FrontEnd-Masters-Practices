@@ -1,6 +1,7 @@
 # React-Native-FrontEnd-Masters-Practices
 
 React Native, v2
+
 Kadi Kraman
 
 ![image](https://user-images.githubusercontent.com/20091777/135791041-d44ce102-26f0-4c4c-a343-6ec782ac4cb0.png)
