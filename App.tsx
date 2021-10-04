@@ -1,5 +1,5 @@
 import React from 'react';
-import RootNavigation from './navigations/RootNavigation';
+import RootNavigation from './RootNavigation';
 
 const App = () => {
   return (
