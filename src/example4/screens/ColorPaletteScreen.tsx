@@ -8,7 +8,7 @@ interface ColorProps {
     hexCode: string,
 }
 
-const SingleColorPalette = (props: any) => {
+const ColorPaletteScreen = (props: any) => {
     const { colors, paletteName } = props.route.params;
 
     const renderItem = ({ item }: { item: ColorProps }) => {
@@ -36,7 +36,7 @@ const SingleColorPalette = (props: any) => {
     )
 }
 
-export default SingleColorPalette
+export default ColorPaletteScreen
 
 const styles = StyleSheet.create({
     container: {

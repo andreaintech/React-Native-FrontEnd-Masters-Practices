@@ -65,13 +65,13 @@ const COLOR_PALETTES = [
     },
 ];
 
-const HomeColorPalettes = ({ navigation }: any) => {
+const HomeScreen = ({ navigation }: any) => {
     console.log('typeof navigation: ', typeof navigation)
 
     const renderItem = ({ item }: any) => {
         return (
             <View>
-                <TouchableOpacity onPress={() => navigation.navigate('SingleColorPalette', { paletteName: item.paletteName, colors: item.colors })}>
+                <TouchableOpacity onPress={() => navigation.navigate('ColorPaletteScreen', { paletteName: item.paletteName, colors: item.colors })}>
                     <Text>{item.paletteName}</Text>
                 </TouchableOpacity>
             </View>
@@ -94,7 +94,7 @@ const HomeColorPalettes = ({ navigation }: any) => {
     )
 }
 
-export default HomeColorPalettes
+export default HomeScreen
 
 
 const styles = StyleSheet.create({
