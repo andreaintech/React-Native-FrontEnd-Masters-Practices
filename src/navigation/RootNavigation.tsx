@@ -4,7 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { Example1 } from '../example1/screens';
 import { Example2 } from '../example2/screens';
 import { Home, ColorPalette, } from '../example3/screens';
-import { HomeColorPalettes, SingleColorPalette, Palette } from '../example4/screens';
+import { HomeColorPalettes, SingleColorPalette } from '../example4/screens';
 
 const Stack = createStackNavigator();
 
@@ -24,10 +24,6 @@ const RootNavigation: React.FC = () => {
                 <Stack.Screen
                     name="SingleColorPalette"
                     component={SingleColorPalette}
-                />
-                <Stack.Screen
-                    name="Palette"
-                    component={Palette}
                 />
                 <Stack.Screen
                     name="Home"
