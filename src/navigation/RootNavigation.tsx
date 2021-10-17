@@ -3,8 +3,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Example1 } from '../example1/screens';
 import { Example2 } from '../example2/screens';
-import { Home, ColorPalette } from '../example3/screens';
-import { HomeColorPalletes, SingleColorPalette } from '../example4/screens';
+import { Home, ColorPalette, } from '../example3/screens';
+import { HomeColorPalettes, SingleColorPalette, Palette } from '../example4/screens';
 
 const Stack = createStackNavigator();
 
@@ -12,15 +12,22 @@ const RootNavigation: React.FC = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator
-                screenOptions={{ headerShown: false, headerBackTitleVisible: false }}
+                screenOptions={{
+                    // headerShown: false,
+                    // headerBackTitleVisible: false,
+                }}
             >
                 <Stack.Screen
-                    name="HomeColorPalletes"
-                    component={HomeColorPalletes}
+                    name="HomeColorPalettes"
+                    component={HomeColorPalettes}
                 />
                 <Stack.Screen
                     name="SingleColorPalette"
                     component={SingleColorPalette}
+                />
+                <Stack.Screen
+                    name="Palette"
+                    component={Palette}
                 />
                 <Stack.Screen
                     name="Home"
