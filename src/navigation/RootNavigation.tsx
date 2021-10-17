@@ -11,19 +11,19 @@ const Stack = createStackNavigator();
 const RootNavigation: React.FC = () => {
     return (
         <NavigationContainer>
-            <Stack.Navigator
-                screenOptions={{
-                    // headerShown: false,
-                    // headerBackTitleVisible: false,
-                }}
-            >
+            <Stack.Navigator>
                 <Stack.Screen
                     name="HomeScreen"
                     component={HomeScreen}
+                    options={{
+                        title: 'Color Palettes',
+                    }}
                 />
                 <Stack.Screen
                     name="ColorPaletteScreen"
                     component={ColorPaletteScreen}
+                    // @ts-ignore
+                    options={({ route }) => ({ title: route?.params?.paletteName })}
                 />
                 <Stack.Screen
                     name="Home"
