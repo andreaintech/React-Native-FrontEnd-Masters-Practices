@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, SafeAreaView, FlatList } from 'react-native'
+import { StyleSheet, Text, FlatList } from 'react-native'
 import ColorBox from '../components/ColorBox';
 
 interface ColorProps {
@@ -26,7 +26,7 @@ const COLORS = [
     { index: 14, colorName: 'Cyan', hexCode: '#2aa198', textColor: 'white' },
     { index: 15, colorName: 'Green', hexCode: '#859900', textColor: 'white' },
 ];
-const Example2 = () => {
+const ColorPalette = () => {
     const renderItem = ({ item }: { item: ColorProps }) => {
         return (
             <ColorBox
@@ -37,30 +37,28 @@ const Example2 = () => {
     }
 
     return (
-        <SafeAreaView>
-            <FlatList
-                style={styles.container}
-                data={COLORS}
-                keyExtractor={item => String(item.index)}
-                contentContainerStyle={styles.contentContainerStyle}
-                renderItem={renderItem}
-                ListHeaderComponent={<Text style={styles.heading}>Solarized</Text>}
-            />
-        </SafeAreaView>
+        <FlatList
+            style={styles.container}
+            data={COLORS}
+            keyExtractor={item => String(item.index)}
+            contentContainerStyle={styles.contentContainerStyle}
+            renderItem={renderItem}
+            ListHeaderComponent={<Text style={styles.heading}>Solarized</Text>}
+        />
     )
 }
 
-export default Example2
+export default ColorPalette
 
 const styles = StyleSheet.create({
     container: {
-        paddingTop: 50,
+        paddingTop: 10,
         paddingHorizontal: 10,
         paddingBottom: 10,
     },
     contentContainerStyle: {
         justifyContent: 'flex-start',
-        alignItems: 'flex-start'
+        alignItems: 'flex-start',
     },
     heading: {
         fontSize: 18,
