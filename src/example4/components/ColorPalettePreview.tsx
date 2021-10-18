@@ -13,7 +13,7 @@ interface ColorPalettePreviewProps {
     colors: Array<Color>
 }
 
-const ColorsPreview = ({ colors }: ColorPalettePreviewProps) => {
+const ColorPalettePreview = ({ colors }: ColorPalettePreviewProps) => {
     const renderItem = ({ item }: any) => {
         return (
             <ColorSquare
@@ -32,4 +32,4 @@ const ColorsPreview = ({ colors }: ColorPalettePreviewProps) => {
     )
 }
 
-export default ColorsPreview
+export default ColorPalettePreview
