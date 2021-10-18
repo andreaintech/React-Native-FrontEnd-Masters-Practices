@@ -11,7 +11,7 @@ const ColorSquare = ({ color }: Props) => {
     }
 
     return (
-        <View style={[styles.square, propStyles]} />
+        <View style={[styles.square, styles.shadow, propStyles]} />
     )
 }
 
@@ -22,6 +22,18 @@ const styles = StyleSheet.create({
         width: 50,
         height: 50,
         marginRight: 10,
-        borderRadius: 10
+        borderRadius: 10,
+        marginTop: 3
+    },
+    shadow: {
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+
+        elevation: 5,
     }
 })
