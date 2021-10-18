@@ -19,8 +19,7 @@ const ColorPalette = ({ paletteName, colors }: ColorPalette) => {
     const navigation = useNavigation();
 
     return (
-        <View style={{ height: 100, justifyContent: 'space-around' }}>
-
+        <View style={styles.container}>
             <TouchableOpacity onPress={() =>
                 // @ts-ignore
                 navigation.navigate('ColorPaletteScreen', { paletteName: paletteName, colors: colors })
@@ -38,6 +37,10 @@ const ColorPalette = ({ paletteName, colors }: ColorPalette) => {
 export default ColorPalette
 
 const styles = StyleSheet.create({
+    container: {
+        height: 100,
+        justifyContent: 'space-around'
+    },
     heading: {
         fontSize: 16,
         fontWeight: 'bold',

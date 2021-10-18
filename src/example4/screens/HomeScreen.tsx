@@ -47,6 +47,7 @@ const styles = StyleSheet.create({
         paddingTop: 10,
         paddingHorizontal: 10,
         paddingBottom: 10,
+        backgroundColor: 'white'
     },
     contentContainerStyle: {
         justifyContent: 'flex-start',

@@ -21,8 +21,6 @@ const ColorPaletteScreen = (props: any) => {
     }
 
     return (
-        // <>
-        //     {colors &&
         <FlatList
             style={styles.container}
             data={colors}
@@ -31,8 +29,6 @@ const ColorPaletteScreen = (props: any) => {
             renderItem={renderItem}
             ListHeaderComponent={<Text style={styles.heading}>{paletteName}</Text>}
         />
-        //     }
-        // </>
     )
 }
 
@@ -43,6 +39,7 @@ const styles = StyleSheet.create({
         paddingTop: 10,
         paddingHorizontal: 10,
         paddingBottom: 10,
+        backgroundColor: 'white'
     },
     contentContainerStyle: {
         justifyContent: 'flex-start',
