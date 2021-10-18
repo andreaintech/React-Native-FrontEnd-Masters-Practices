@@ -1,6 +1,18 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
+const shadow = {
+    shadowColor: "#000",
+    shadowOffset: {
+        width: 0,
+        height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+
+    elevation: 5,
+}
+
 interface Props {
     hexCode: string
     colorName: string
@@ -19,7 +31,7 @@ const ColorBox = ({
     };
 
     return (
-        <View style={[styles.box, colorStyle]}>
+        <View style={[styles.box, styles.shadow, colorStyle]}>
             <Text style={[styles.text, textColorStyle]}>
                 {colorName} {hexCode}
             </Text>
@@ -47,4 +59,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: 'white',
     },
+    shadow: {
+        ...shadow
+    }
 })

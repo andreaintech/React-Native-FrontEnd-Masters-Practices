@@ -1,6 +1,18 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
+const shadow = {
+    shadowColor: "#000",
+    shadowOffset: {
+        width: 0,
+        height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+
+    elevation: 5,
+}
+
 interface Props {
     color: string
 }
@@ -26,14 +38,6 @@ const styles = StyleSheet.create({
         marginTop: 3
     },
     shadow: {
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 2,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
-
-        elevation: 5,
+        ...shadow
     }
 })
