@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, FlatList } from 'react-native';
+import { FlatList } from 'react-native';
 import { ColorSquare } from '.';
 
 interface Color {
@@ -14,7 +14,6 @@ interface ColorPalettePreviewProps {
 }
 
 const ColorsPreview = ({ colors }: ColorPalettePreviewProps) => {
-
     const renderItem = ({ item }: any) => {
         return (
             <ColorSquare
@@ -26,18 +25,11 @@ const ColorsPreview = ({ colors }: ColorPalettePreviewProps) => {
     return (
         <FlatList
             horizontal
-            style={styles.container}
             data={colors.slice(0, 5)}
             keyExtractor={(item, index) => String(index)}
-            contentContainerStyle={styles.contentContainerStyle}
             renderItem={renderItem}
         />
     )
 }
 
 export default ColorsPreview
-
-const styles = StyleSheet.create({
-    container: {},
-    contentContainerStyle: {}
-})

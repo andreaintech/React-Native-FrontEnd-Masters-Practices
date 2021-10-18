@@ -21,18 +21,18 @@ const ColorPaletteScreen = (props: any) => {
     }
 
     return (
-        <>
-            {colors &&
-                <FlatList
-                    style={styles.container}
-                    data={colors}
-                    keyExtractor={(item, index) => String(index)}
-                    contentContainerStyle={styles.contentContainerStyle}
-                    renderItem={renderItem}
-                    ListHeaderComponent={<Text style={styles.heading}>{paletteName}</Text>}
-                />
-            }
-        </>
+        // <>
+        //     {colors &&
+        <FlatList
+            style={styles.container}
+            data={colors}
+            keyExtractor={(item, index) => String(index)}
+            contentContainerStyle={styles.contentContainerStyle}
+            renderItem={renderItem}
+            ListHeaderComponent={<Text style={styles.heading}>{paletteName}</Text>}
+        />
+        //     }
+        // </>
     )
 }
 

@@ -35,7 +35,6 @@ const HomeScreen = ({ navigation }: any) => {
             keyExtractor={(item, index) => String(index)}
             contentContainerStyle={styles.contentContainerStyle}
             renderItem={renderItem}
-            ListHeaderComponent={(item) => (<Text style={styles.heading}>{item.paletteName}</Text>)}
         />
     )
 }
@@ -53,10 +52,4 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
         alignItems: 'flex-start',
     },
-    heading: {
-        fontSize: 18,
-        fontWeight: 'bold',
-        marginBottom: 10,
-        color: 'black'
-    }
 })

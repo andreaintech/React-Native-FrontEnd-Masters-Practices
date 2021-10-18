@@ -21,5 +21,7 @@ const styles = StyleSheet.create({
     square: {
         width: 50,
         height: 50,
+        marginRight: 10,
+        borderRadius: 10
     }
 })

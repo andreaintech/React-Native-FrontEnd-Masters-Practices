@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, TouchableOpacity } from 'react-native';
+import { Text, View, TouchableOpacity, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { ColorsPreview } from '.';
 
@@ -25,7 +25,7 @@ const ColorPalette = ({ paletteName, colors }: ColorPalette) => {
                 // @ts-ignore
                 navigation.navigate('ColorPaletteScreen', { paletteName: paletteName, colors: colors })
             }>
-                <Text>{paletteName}</Text>
+                <Text style={styles.heading}>{paletteName}</Text>
             </TouchableOpacity>
 
             <ColorsPreview
@@ -36,3 +36,12 @@ const ColorPalette = ({ paletteName, colors }: ColorPalette) => {
 }
 
 export default ColorPalette
+
+const styles = StyleSheet.create({
+    heading: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        marginBottom: 10,
+        color: 'black'
+    }
+})
