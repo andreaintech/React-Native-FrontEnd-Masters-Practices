@@ -8,6 +8,7 @@ import { HomeScreen, ColorPaletteScreen } from '../example4/screens';
 import { UseStateHook } from '../example5/screens';
 import { UseCallbackHook } from '../example6/screens';
 import { UseEffectHook } from '../example7/screens';
+import { NetworkExercise } from '../exercise8/screens';
 
 const Stack = createStackNavigator();
 
@@ -15,6 +16,13 @@ const RootNavigation: React.FC = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator>
+                <Stack.Screen
+                    name="NetworkExercise"
+                    component={NetworkExercise}
+                    options={{
+                        title: 'Colors Palette - Network Exercise',
+                    }}
+                />
                 <Stack.Screen
                     name="UseEffectHook"
                     component={UseEffectHook}
