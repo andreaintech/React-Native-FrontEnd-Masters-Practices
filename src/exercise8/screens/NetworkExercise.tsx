@@ -3,56 +3,61 @@
 // Hint: you should use useEffect, useCallback and useState for this!
 
 import React, { useState, useEffect, useCallback } from 'react';
-import { StyleSheet, SafeAreaView, FlatList, View, Text } from 'react-native';
+import { StyleSheet, FlatList } from 'react-native';
+import { ColorPalette } from '../components';
 
 const BASE_URL = 'https://color-palette-api.kadikraman.now.sh/palettes';
 
 const NetworkExercise = () => {
-    const [colors, setColors] = useState([]);
+    const [colorPalettes, setColorPalettes] = useState([]);
 
-    const renderItem = ({ item }: { item: any }) => {
-        return (
-            <View style={{ marginBottom: 10, marginLeft: 10 }}>
-                <Text>{item.paletteName}</Text>
-            </View>
-        )
-    }
-
-    const handleFetchColorsPalette = useCallback(async () => {
+    const fetchColorsPalette = useCallback(async () => {
         const result = await fetch(BASE_URL);
-        const colorss = await result.json();
 
-        if (colorss?.length > 0) {
-            setColors(colorss);
+        if (result.ok) {
+            const colors = await result.json();
+
+            if (colors?.length > 0) {
+                setColorPalettes(colors);
+            }
         }
     }, []);
 
     useEffect(() => {
-        handleFetchColorsPalette();
+        fetchColorsPalette();
     }, []);
 
-    return (
-        <SafeAreaView style={{ flex: 1 }}>
-            <FlatList
-                style={styles.list}
-                data={colors}
-                keyExtractor={item => String(item.id)}
-                renderItem={renderItem}
+    const renderItem = ({ item }: any) => {
+        return (
+            <ColorPalette
+                paletteName={item.paletteName}
+                colors={item.colors}
             />
-        </SafeAreaView>
+        )
+    }
+
+    return (
+        <FlatList
+            style={styles.container}
+            data={colorPalettes}
+            keyExtractor={(item, index) => String(index)}
+            contentContainerStyle={styles.contentContainerStyle}
+            renderItem={renderItem}
+        />
     )
 }
 
 export default NetworkExercise
 
 const styles = StyleSheet.create({
-    list: {
-        marginTop: 20,
-        padding: 10,
-        flex: 1,
+    container: {
+        paddingTop: 10,
+        paddingHorizontal: 10,
+        paddingBottom: 10,
+        backgroundColor: 'white'
     },
-    text: {
-        marginBottom: 20,
-        fontSize: 16
-    }
+    contentContainerStyle: {
+        justifyContent: 'flex-start',
+        alignItems: 'flex-start',
+    },
 })

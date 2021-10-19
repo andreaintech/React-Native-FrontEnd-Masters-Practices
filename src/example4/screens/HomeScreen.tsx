@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, FlatList, StyleSheet } from 'react-native';
 import { ColorPalette } from '../components';
-import { COLOR_PALETTES } from '../utils';
+import { COLOR_PALETTES } from '../../utils';
 
 interface Color {
     index: number,
