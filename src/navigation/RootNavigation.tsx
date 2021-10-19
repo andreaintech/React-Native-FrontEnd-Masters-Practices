@@ -5,6 +5,7 @@ import { Example1 } from '../example1/screens';
 import { Example2 } from '../example2/screens';
 import { Home, ColorPalette, } from '../example3/screens';
 import { HomeScreen, ColorPaletteScreen } from '../example4/screens';
+import { UseStateHook } from '../example5/screens';
 
 const Stack = createStackNavigator();
 
@@ -12,6 +13,13 @@ const RootNavigation: React.FC = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator>
+                <Stack.Screen
+                    name="UseStateHook"
+                    component={UseStateHook}
+                    options={{
+                        title: 'Example of useState hook',
+                    }}
+                />
                 <Stack.Screen
                     name="HomeScreen"
                     component={HomeScreen}
