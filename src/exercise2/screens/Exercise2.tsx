@@ -26,7 +26,8 @@ const COLORS = [
     { index: 14, colorName: 'Cyan', hexCode: '#2aa198', textColor: 'white' },
     { index: 15, colorName: 'Green', hexCode: '#859900', textColor: 'white' },
 ];
-const Example2 = () => {
+
+const Exercise2 = () => {
     const renderItem = ({ item }: { item: ColorProps }) => {
         return (
             <ColorBox
@@ -50,7 +51,7 @@ const Example2 = () => {
     )
 }
 
-export default Example2
+export default Exercise2
 
 const styles = StyleSheet.create({
     container: {

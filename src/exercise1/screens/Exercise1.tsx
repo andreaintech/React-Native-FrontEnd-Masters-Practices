@@ -25,7 +25,7 @@ const COLORS = [
     },
 ]
 
-const Example1 = () => {
+const Exercise1 = () => {
     return (
         <SafeAreaView style={styles.safeArea}>
             <View style={[
@@ -42,7 +42,7 @@ const Example1 = () => {
     )
 }
 
-export default Example1
+export default Exercise1
 
 const styles = StyleSheet.create({
     container: {

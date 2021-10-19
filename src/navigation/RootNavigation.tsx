@@ -1,13 +1,13 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Example1 } from '../example1/screens';
-import { Example2 } from '../example2/screens';
-import { Home, ColorPalette, } from '../example3/screens';
-import { HomeScreen, ColorPaletteScreen } from '../example4/screens';
-import { UseStateHook } from '../example5/screens';
-import { UseCallbackHook } from '../example6/screens';
-import { UseEffectHook } from '../example7/screens';
+import { Exercise1 } from '../exercise1/screens';
+import { Exercise2 } from '../exercise2/screens';
+import { Home, ColorPalette, } from '../exercise3/screens';
+import { HomeScreen, ColorPaletteScreen } from '../exercise4/screens';
+import { UseStateHook } from '../exercise5/screens';
+import { UseCallbackHook } from '../exercise6/screens';
+import { UseEffectHook } from '../exercise7/screens';
 import { NetworkExercise } from '../exercise8/screens';
 
 const Stack = createStackNavigator();
@@ -66,12 +66,12 @@ const RootNavigation: React.FC = () => {
                     component={ColorPalette}
                 />
                 <Stack.Screen
-                    name="Example2"
-                    component={Example2}
+                    name="Exercise2"
+                    component={Exercise2}
                 />
                 <Stack.Screen
-                    name="Example1"
-                    component={Example1}
+                    name="Exercise1"
+                    component={Exercise1}
                 />
             </Stack.Navigator>
         </NavigationContainer>
