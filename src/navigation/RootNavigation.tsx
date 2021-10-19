@@ -7,6 +7,7 @@ import { Home, ColorPalette, } from '../example3/screens';
 import { HomeScreen, ColorPaletteScreen } from '../example4/screens';
 import { UseStateHook } from '../example5/screens';
 import { UseCallbackHook } from '../example6/screens';
+import { UseEffectHook } from '../example7/screens';
 
 const Stack = createStackNavigator();
 
@@ -14,6 +15,13 @@ const RootNavigation: React.FC = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator>
+                <Stack.Screen
+                    name="UseEffectHook"
+                    component={UseEffectHook}
+                    options={{
+                        title: 'Example of useEffect hook',
+                    }}
+                />
                 <Stack.Screen
                     name="UseCallbackHook"
                     component={UseCallbackHook}
