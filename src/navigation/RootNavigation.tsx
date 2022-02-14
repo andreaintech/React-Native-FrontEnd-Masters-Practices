@@ -10,6 +10,7 @@ import { UseCallbackHook } from '../exercise6/screens';
 import { UseEffectHook } from '../exercise7/screens';
 import { NetworkExercise } from '../exercise8/screens';
 import { RefreshControlExercise } from '../exercise9/screens';
+import { TextInputsExample } from '../exercise10/textInputExample/screens';
 
 const Stack = createStackNavigator();
 
@@ -17,6 +18,13 @@ const RootNavigation: React.FC = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator>
+                <Stack.Screen
+                    name="TextInputsExample"
+                    component={TextInputsExample}
+                    options={{
+                        title: 'Texts Inputs Example',
+                    }}
+                />
                 <Stack.Screen
                     name="RefreshControlExercise"
                     component={RefreshControlExercise}
