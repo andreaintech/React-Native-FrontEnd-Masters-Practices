@@ -11,6 +11,7 @@ import { UseEffectHook } from '../exercise7/screens';
 import { NetworkExercise } from '../exercise8/screens';
 import { RefreshControlExercise } from '../exercise9/screens';
 import { TextInputsExample } from '../exercise10/textInputExample/screens';
+import { PickerExample } from '../exercise10/pickerExample/screens';
 
 const Stack = createStackNavigator();
 
@@ -18,6 +19,13 @@ const RootNavigation: React.FC = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator>
+                <Stack.Screen
+                    name="PickerExample"
+                    component={PickerExample}
+                    options={{
+                        title: 'Picker Example',
+                    }}
+                />
                 <Stack.Screen
                     name="TextInputsExample"
                     component={TextInputsExample}
