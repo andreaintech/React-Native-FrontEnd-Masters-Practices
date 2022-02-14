@@ -12,6 +12,7 @@ import { NetworkExercise } from '../exercise8/screens';
 import { RefreshControlExercise } from '../exercise9/screens';
 import { TextInputsExample } from '../exercise10/textInputExample/screens';
 import { PickerExample } from '../exercise10/pickerExample/screens';
+import { SwitchExample } from '../exercise10/switchExample/screens';
 
 const Stack = createStackNavigator();
 
@@ -19,6 +20,13 @@ const RootNavigation: React.FC = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator>
+                <Stack.Screen
+                    name="SwitchExample"
+                    component={SwitchExample}
+                    options={{
+                        title: 'Switch Example',
+                    }}
+                />
                 <Stack.Screen
                     name="PickerExample"
                     component={PickerExample}
