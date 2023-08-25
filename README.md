@@ -11,3 +11,6 @@ Formidable
 Course description: Leverage your JavaScript and React skills for mobile iOS and Android platforms using React Native. Examples in this course allow you to get started quickly and see your changes immediately in React Native using Expo, or use pure React Native standalone if you prefer. You’ll use native components for rendering lists, building forms, and styling them with CSS. Then you’ll learn to navigate between screens and fetch data with React hooks. By then end of the course, you’ll be able to ship your very own native mobile applications!
 
 Published: May 5, 2020
+
+
+Updated and maintained with ❤️ by [@andreaintech](https://andreaintech.github.io/web/)
